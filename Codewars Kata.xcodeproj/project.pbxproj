@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AC4B73C2C80982C007416C6 /* Codewars_KataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B73B2C80982C007416C6 /* Codewars_KataApp.swift */; };
+		8AC4B73E2C80982C007416C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B73D2C80982C007416C6 /* ContentView.swift */; };
+		8AC4B7402C80982E007416C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4B73F2C80982E007416C6 /* Assets.xcassets */; };
+		8AC4B7432C80982E007416C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4B7422C80982E007416C6 /* Preview Assets.xcassets */; };
+		8AC4B74D2C80982F007416C6 /* Codewars_KataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B74C2C80982F007416C6 /* Codewars_KataTests.swift */; };
+		8AC4B7572C80982F007416C6 /* Codewars_KataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B7562C80982F007416C6 /* Codewars_KataUITests.swift */; };
+		8AC4B7592C80982F007416C6 /* Codewars_KataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B7582C80982F007416C6 /* Codewars_KataUITestsLaunchTests.swift */; };
+		8AC4B7672C80993F007416C6 /* Kyu6_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B7662C80993F007416C6 /* Kyu6_1.swift */; };
+		8AC4B7692C809B1E007416C6 /* Kyu8_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B7682C809B1E007416C6 /* Kyu8_1.swift */; };
+		8AC4B76B2C809FCA007416C6 /* Kyu5_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B76A2C809FCA007416C6 /* Kyu5_1.swift */; };
+		8AC4B76D2C80A017007416C6 /* Kyu7_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B76C2C80A017007416C6 /* Kyu7_1.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AC4B7492C80982F007416C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AC4B7302C80982C007416C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AC4B7372C80982C007416C6;
+			remoteInfo = "Codewars Kata";
+		};
+		8AC4B7532C80982F007416C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AC4B7302C80982C007416C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AC4B7372C80982C007416C6;
+			remoteInfo = "Codewars Kata";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8AC4B7382C80982C007416C6 /* Codewars Kata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codewars Kata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC4B73B2C80982C007416C6 /* Codewars_KataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codewars_KataApp.swift; sourceTree = "<group>"; };
+		8AC4B73D2C80982C007416C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8AC4B73F2C80982E007416C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AC4B7422C80982E007416C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8AC4B7482C80982F007416C6 /* Codewars KataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Codewars KataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC4B74C2C80982F007416C6 /* Codewars_KataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codewars_KataTests.swift; sourceTree = "<group>"; };
+		8AC4B7522C80982F007416C6 /* Codewars KataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Codewars KataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC4B7562C80982F007416C6 /* Codewars_KataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codewars_KataUITests.swift; sourceTree = "<group>"; };
+		8AC4B7582C80982F007416C6 /* Codewars_KataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codewars_KataUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AC4B7662C80993F007416C6 /* Kyu6_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu6_1.swift; sourceTree = "<group>"; };
+		8AC4B7682C809B1E007416C6 /* Kyu8_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu8_1.swift; sourceTree = "<group>"; };
+		8AC4B76A2C809FCA007416C6 /* Kyu5_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu5_1.swift; sourceTree = "<group>"; };
+		8AC4B76C2C80A017007416C6 /* Kyu7_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu7_1.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AC4B7352C80982C007416C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC4B7452C80982F007416C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC4B74F2C80982F007416C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AC4B72F2C80982C007416C6 = {
+			isa = PBXGroup;
+			children = (
+				8AC4B73A2C80982C007416C6 /* Codewars Kata */,
+				8AC4B74B2C80982F007416C6 /* Codewars KataTests */,
+				8AC4B7552C80982F007416C6 /* Codewars KataUITests */,
+				8AC4B7392C80982C007416C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AC4B7392C80982C007416C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B7382C80982C007416C6 /* Codewars Kata.app */,
+				8AC4B7482C80982F007416C6 /* Codewars KataTests.xctest */,
+				8AC4B7522C80982F007416C6 /* Codewars KataUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AC4B73A2C80982C007416C6 /* Codewars Kata */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B7652C8098F4007416C6 /* Kata */,
+				8AC4B73B2C80982C007416C6 /* Codewars_KataApp.swift */,
+				8AC4B73D2C80982C007416C6 /* ContentView.swift */,
+				8AC4B73F2C80982E007416C6 /* Assets.xcassets */,
+				8AC4B7412C80982E007416C6 /* Preview Content */,
+			);
+			path = "Codewars Kata";
+			sourceTree = "<group>";
+		};
+		8AC4B7412C80982E007416C6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B7422C80982E007416C6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8AC4B74B2C80982F007416C6 /* Codewars KataTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B74C2C80982F007416C6 /* Codewars_KataTests.swift */,
+			);
+			path = "Codewars KataTests";
+			sourceTree = "<group>";
+		};
+		8AC4B7552C80982F007416C6 /* Codewars KataUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B7562C80982F007416C6 /* Codewars_KataUITests.swift */,
+				8AC4B7582C80982F007416C6 /* Codewars_KataUITestsLaunchTests.swift */,
+			);
+			path = "Codewars KataUITests";
+			sourceTree = "<group>";
+		};
+		8AC4B7652C8098F4007416C6 /* Kata */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B7662C80993F007416C6 /* Kyu6_1.swift */,
+				8AC4B7682C809B1E007416C6 /* Kyu8_1.swift */,
+				8AC4B76A2C809FCA007416C6 /* Kyu5_1.swift */,
+				8AC4B76C2C80A017007416C6 /* Kyu7_1.swift */,
+			);
+			path = Kata;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AC4B7372C80982C007416C6 /* Codewars Kata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AC4B75C2C80982F007416C6 /* Build configuration list for PBXNativeTarget "Codewars Kata" */;
+			buildPhases = (
+				8AC4B7342C80982C007416C6 /* Sources */,
+				8AC4B7352C80982C007416C6 /* Frameworks */,
+				8AC4B7362C80982C007416C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Codewars Kata";
+			productName = "Codewars Kata";
+			productReference = 8AC4B7382C80982C007416C6 /* Codewars Kata.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AC4B7472C80982F007416C6 /* Codewars KataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AC4B75F2C80982F007416C6 /* Build configuration list for PBXNativeTarget "Codewars KataTests" */;
+			buildPhases = (
+				8AC4B7442C80982F007416C6 /* Sources */,
+				8AC4B7452C80982F007416C6 /* Frameworks */,
+				8AC4B7462C80982F007416C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AC4B74A2C80982F007416C6 /* PBXTargetDependency */,
+			);
+			name = "Codewars KataTests";
+			productName = "Codewars KataTests";
+			productReference = 8AC4B7482C80982F007416C6 /* Codewars KataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8AC4B7512C80982F007416C6 /* Codewars KataUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AC4B7622C80982F007416C6 /* Build configuration list for PBXNativeTarget "Codewars KataUITests" */;
+			buildPhases = (
+				8AC4B74E2C80982F007416C6 /* Sources */,
+				8AC4B74F2C80982F007416C6 /* Frameworks */,
+				8AC4B7502C80982F007416C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AC4B7542C80982F007416C6 /* PBXTargetDependency */,
+			);
+			name = "Codewars KataUITests";
+			productName = "Codewars KataUITests";
+			productReference = 8AC4B7522C80982F007416C6 /* Codewars KataUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AC4B7302C80982C007416C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					8AC4B7372C80982C007416C6 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					8AC4B7472C80982F007416C6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 8AC4B7372C80982C007416C6;
+					};
+					8AC4B7512C80982F007416C6 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 8AC4B7372C80982C007416C6;
+					};
+				};
+			};
+			buildConfigurationList = 8AC4B7332C80982C007416C6 /* Build configuration list for PBXProject "Codewars Kata" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AC4B72F2C80982C007416C6;
+			productRefGroup = 8AC4B7392C80982C007416C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8AC4B7372C80982C007416C6 /* Codewars Kata */,
+				8AC4B7472C80982F007416C6 /* Codewars KataTests */,
+				8AC4B7512C80982F007416C6 /* Codewars KataUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AC4B7362C80982C007416C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC4B7432C80982E007416C6 /* Preview Assets.xcassets in Resources */,
+				8AC4B7402C80982E007416C6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC4B7462C80982F007416C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC4B7502C80982F007416C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AC4B7342C80982C007416C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC4B7692C809B1E007416C6 /* Kyu8_1.swift in Sources */,
+				8AC4B76B2C809FCA007416C6 /* Kyu5_1.swift in Sources */,
+				8AC4B7672C80993F007416C6 /* Kyu6_1.swift in Sources */,
+				8AC4B73E2C80982C007416C6 /* ContentView.swift in Sources */,
+				8AC4B73C2C80982C007416C6 /* Codewars_KataApp.swift in Sources */,
+				8AC4B76D2C80A017007416C6 /* Kyu7_1.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC4B7442C80982F007416C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC4B74D2C80982F007416C6 /* Codewars_KataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AC4B74E2C80982F007416C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AC4B7572C80982F007416C6 /* Codewars_KataUITests.swift in Sources */,
+				8AC4B7592C80982F007416C6 /* Codewars_KataUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AC4B74A2C80982F007416C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AC4B7372C80982C007416C6 /* Codewars Kata */;
+			targetProxy = 8AC4B7492C80982F007416C6 /* PBXContainerItemProxy */;
+		};
+		8AC4B7542C80982F007416C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AC4B7372C80982C007416C6 /* Codewars Kata */;
+			targetProxy = 8AC4B7532C80982F007416C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8AC4B75A2C80982F007416C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8AC4B75B2C80982F007416C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8AC4B75D2C80982F007416C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Codewars Kata/Preview Content\"";
+				DEVELOPMENT_TEAM = RGNUVXVFAQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alextern.codewars-kata.Codewars-Kata";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8AC4B75E2C80982F007416C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Codewars Kata/Preview Content\"";
+				DEVELOPMENT_TEAM = RGNUVXVFAQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alextern.codewars-kata.Codewars-Kata";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8AC4B7602C80982F007416C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGNUVXVFAQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alextern.codewars-kata.Codewars-KataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Codewars Kata.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Codewars Kata";
+			};
+			name = Debug;
+		};
+		8AC4B7612C80982F007416C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGNUVXVFAQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alextern.codewars-kata.Codewars-KataTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Codewars Kata.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Codewars Kata";
+			};
+			name = Release;
+		};
+		8AC4B7632C80982F007416C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGNUVXVFAQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alextern.codewars-kata.Codewars-KataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Codewars Kata";
+			};
+			name = Debug;
+		};
+		8AC4B7642C80982F007416C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RGNUVXVFAQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alextern.codewars-kata.Codewars-KataUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Codewars Kata";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AC4B7332C80982C007416C6 /* Build configuration list for PBXProject "Codewars Kata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC4B75A2C80982F007416C6 /* Debug */,
+				8AC4B75B2C80982F007416C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AC4B75C2C80982F007416C6 /* Build configuration list for PBXNativeTarget "Codewars Kata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC4B75D2C80982F007416C6 /* Debug */,
+				8AC4B75E2C80982F007416C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AC4B75F2C80982F007416C6 /* Build configuration list for PBXNativeTarget "Codewars KataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC4B7602C80982F007416C6 /* Debug */,
+				8AC4B7612C80982F007416C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AC4B7622C80982F007416C6 /* Build configuration list for PBXNativeTarget "Codewars KataUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AC4B7632C80982F007416C6 /* Debug */,
+				8AC4B7642C80982F007416C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AC4B7302C80982C007416C6 /* Project object */;
+}
