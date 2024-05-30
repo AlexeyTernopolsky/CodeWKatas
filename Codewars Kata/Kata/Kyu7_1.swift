@@ -15,7 +15,7 @@ enum Kyu7_1 {
     }
     
     // Task: Resistor Color Codes
-    // Ref: https://www.codewars.com/kata/57cf3dad05c186ba22000348
+    // Ref: 57cf3dad05c186ba22000348
     func decodeResistorColors(_ bands: String) -> String {
         func decodeWord(_ word: String.SubSequence) -> Double {
             switch word {

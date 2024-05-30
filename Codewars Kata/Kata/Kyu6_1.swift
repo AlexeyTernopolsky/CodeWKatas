@@ -169,6 +169,57 @@ enum Kyu6_1 {
         
         return foldArray(oneSum, times: times - 1)
     }
+    
+    // Task: Basics 08: Find next higher number with same Bits (1's)
+    // Ref: 56bdd0aec5dc03d7780010a5
+    func sumOfBits(_ n: Int) -> Int {
+        var result = 0
+        var nD = n
+        while nD > 0 {
+            result += nD % 2
+            nD = nD >> 1
+        }
+        
+        return result
+    }
+
+
+    func nextHigher(_ n: Int) -> Int {
+        let originalSum = sumOfBits(n)
+        var result = n + 1
+        while originalSum != sumOfBits(result) {
+            result += 1
+        }
+        return result
+    }
+    
+    // Task: Playing with passphrases
+    // Ref: 559536379512a64472000053
+    func playPass(_ s: String, _ n: Int) -> String {
+        var result = ""
+        let zeroValue = Int("0".unicodeScalars.first?.value ?? 0)
+        let aValue = Int("A".unicodeScalars.first?.value ?? 0)
+        let zValue = Int("Z".unicodeScalars.first?.value ?? 0)
+        let modulo = zValue - aValue + 1
+        let upString = s.uppercased()
+        var index = 0
+        
+        for char in s.uppercased() {
+            if let number = char.wholeNumberValue {
+                result += String(UnicodeScalar(zeroValue + 9 - number)!)
+            } else if char.isLetter {
+                var charValue = Int(char.unicodeScalars.first?.value ?? 0)
+                charValue = (charValue - aValue + n) % modulo + aValue
+                let add = String(UnicodeScalar(charValue)!)
+                result += index % 2 == 1 ? add.lowercased() : add
+            } else {
+                result += String(char)
+            }
+            index += 1
+        }
+        
+        return String(result.reversed())
+    }
 }
 
 

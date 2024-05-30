@@ -9,7 +9,7 @@ import Foundation
 
 enum Kyu4_1 {
     // Task: Human readable duration format
-    // Ref: https://www.codewars.com/kata/52742f58faf5485cae000b9a
+    // Ref: 52742f58faf5485cae000b9a
     func formatDuration(_ seconds: Int) -> String {
         guard seconds > 0 else {return "now"}
         var items = [String]()
@@ -37,7 +37,7 @@ enum Kyu4_1 {
     }
     
     // Task: Path Finder #1: can you reach the exit?
-    // Ref: https://www.codewars.com/kata/5765870e190b1472ec0022a2
+    // Ref: 5765870e190b1472ec0022a2
     enum PosType {
         case empty, filled, wall
     }

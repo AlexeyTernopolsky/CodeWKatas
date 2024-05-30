@@ -25,7 +25,7 @@ enum Kyu5_1 {
     }
     
     // Task: Convert A Hex String To RGB
-    // Ref: https://www.codewars.com/kata/5282b48bb70058e4c4000fa7
+    // Ref: 5282b48bb70058e4c4000fa7
     struct RGB: CustomStringConvertible, Equatable {
         var r:Int
         var g:Int
@@ -60,7 +60,7 @@ enum Kyu5_1 {
     }
     
     // Task: John and Ann sign up for Codewars
-    // Ref: https://www.codewars.com/kata/57591ef494aba64d14000526
+    // Ref: 57591ef494aba64d14000526
     func annAndJohn(_ n: Int) -> ([Int], [Int]) {
         var ann = [1]
         var john = [0]
@@ -91,7 +91,7 @@ enum Kyu5_1 {
     }
     
     // Task: Primes in numbers
-    // Ref: https://www.codewars.com/kata/54d512e62a5e54c96200019e
+    // Ref: 54d512e62a5e54c96200019e
     func factors(_ number: Int) -> String {
         let sq = Int(sqrt(Double(number)))
         var remain = number
@@ -128,7 +128,7 @@ enum Kyu5_1 {
     }
     
     // Task: Best travel
-    // Ref: https://www.codewars.com/kata/55e7280b40e1c4a06d0000aa
+    // Ref: 55e7280b40e1c4a06d0000aa
     func bestSum(_ target: Int, _ count: Int,_ list: [Int], _ itemCount: Int) -> Int {
         guard count <= itemCount else { return -1 }
         if count == 1 {
