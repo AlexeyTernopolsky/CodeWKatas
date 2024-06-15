@@ -201,7 +201,6 @@ enum Kyu6_1 {
         let aValue = Int("A".unicodeScalars.first?.value ?? 0)
         let zValue = Int("Z".unicodeScalars.first?.value ?? 0)
         let modulo = zValue - aValue + 1
-        let upString = s.uppercased()
         var index = 0
         
         for char in s.uppercased() {
@@ -219,6 +218,35 @@ enum Kyu6_1 {
         }
         
         return String(result.reversed())
+    }
+    
+    // Task: Two Sets of Equal Sum
+    // Ref: 647518391e258e80eedf6e06
+    func createTwoSetsOfEqualSum(_ n: Int) -> [[Int]] {
+        let sum = (1 + n) * n / 2
+        guard sum % 2 == 0 else { return [] }
+        var targetSum = sum / 2
+        var second = [Int]()
+        var lastCandidate = n
+        while lastCandidate <= targetSum {
+            second.append(lastCandidate)
+            targetSum -= lastCandidate
+            lastCandidate -= 1
+        }
+        
+        
+        if targetSum != 0 {
+            second.append(targetSum)
+        }
+        
+        var first = [Int]()
+        for i in 1...lastCandidate {
+            if i != targetSum {
+                first.append(i)
+            }
+        }
+        
+        return [ first, second ]
     }
 }
 
