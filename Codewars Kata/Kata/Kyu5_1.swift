@@ -42,7 +42,7 @@ enum Kyu5_1 {
             return "{R:\(r), G:\(g), B:\(b)}"
         }
     }
-
+    
     func hexStringToRGB(_ str:String) -> RGB {
         var strTmp = ""
         var ar = [UInt8]()
@@ -73,19 +73,19 @@ enum Kyu5_1 {
         
         return (ann, john)
     }
-
+    
     func ann(_ n : Int) -> [Int] {
         annAndJohn(n).0
     }
-
+    
     func john(_ n : Int) -> [Int] {
         annAndJohn(n).1
     }
-
+    
     func sumJohn(_ n : Int) -> Int {
         john(n).reduce(0, +)
     }
-
+    
     func sumAnn(_ n : Int) -> Int {
         ann(n).reduce(0, +)
     }
@@ -98,7 +98,7 @@ enum Kyu5_1 {
         var probe = 2
         var result = ""
         var primeCount = 0
-      
+        
         func handlePrime(_ prime: Int,_ count: Int) {
             switch count {
             case 0: return
@@ -106,7 +106,7 @@ enum Kyu5_1 {
             default: result += "(\(prime)**\(count))"
             }
         }
-      
+        
         while probe <= remain && probe <= sq {
             if remain % probe == 0 {
                 primeCount += 1
@@ -141,7 +141,7 @@ enum Kyu5_1 {
             let lastItem = list[itemCount - 1]
             var withLast = bestSum(target - lastItem, count-1, list, itemCount - 1)
             if withLast != -1 {
-              withLast += lastItem
+                withLast += lastItem
             }
             
             guard withLast != target else {return target}
@@ -151,7 +151,7 @@ enum Kyu5_1 {
         
         return -1
     }
-
+    
     func chooseBestSum(_ t: Int, _ k: Int, _ ls: [Int]) -> Int {
         guard k <= ls.count else { return -1}
         let sList = ls.sorted()
@@ -159,5 +159,48 @@ enum Kyu5_1 {
         guard sList[0..<k].reduce(0, +) <= t else { return -1 }
         
         return bestSum(t, k, sList, sList.count)
+    }
+    
+    // Task: Greed is Good
+    // Ref: 5270d0d18625160ada0000e4
+    func score(_ dice: [Int]) -> Int {
+        var diceCount = [0, 0, 0, 0, 0, 0]
+        dice.forEach { diceCount[$0 - 1] += 1 }
+        var result = 0
+        if diceCount[0] >= 3 { // 1
+            result += 1000 + (diceCount[0] - 3) * 100
+        } else {
+            result += diceCount[0] * 100
+        }
+        if diceCount[1] >= 3 { // 2
+            result += 200
+        }
+        if diceCount[2] >= 3 { // 3
+            result += 300
+        }
+        if diceCount[3] >= 3 { // 4
+            result += 400
+        }
+        if diceCount[4] >= 3 { // 5
+            result += 500 + (diceCount[4] - 3) * 50
+        } else {
+            result += diceCount[4] * 50
+        }
+        if diceCount[5] >= 3 { // 6
+            result += 600
+        }
+        return result
+    }
+    
+    // Task: Number of trailing zeros of N!
+    // Ref: 52f787eb172a8b4ae1000a34
+    func zeros(_ n: UInt32) -> UInt32 {
+        var result = UInt32(0)
+        var delimiter = UInt32(5)
+        while delimiter < n {
+            result += n / delimiter
+            delimiter *= 5
+        }
+        return result
     }
 }

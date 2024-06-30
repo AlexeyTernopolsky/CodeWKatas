@@ -387,6 +387,98 @@ enum Kyu7_1 {
         guard keyIndexes.count == 2 else { return 0 }
         return keyIndexes[1] - keyIndexes[0] + 1
     }
+    
+    // Task: Partial Word Searching
+    // Ref: 54b81566cd7f51408300022d
+    func wordSearch(_ str:String, _ arr:[String]) -> [String] {
+        let result = arr.filter { $0.lowercased().contains(str.lowercased()) }
+        return result.isEmpty ? ["Empty"] : result
+    }
+    
+    // Task: Binary Calculator
+    // Ref: 546ba103f0cf8f7982000df4
+    enum Operator {
+        case ADD, SUBTRACT, MULTIPLY
+    }
+
+    func calculate(_ a:String, _ b:String, _ op:Operator) -> String {
+        guard let aDig = Int(a, radix: 2), let bDig = Int(b, radix: 2) else { return "Error" }
+        let resultDig: Int
+        switch op {
+        case .ADD: resultDig = aDig + bDig
+        case .SUBTRACT: resultDig = aDig - bDig
+        case.MULTIPLY: resultDig = aDig * bDig
+        }
+        return String(resultDig, radix: 2)
+    }
+    
+    // Task: ToLeetSpeak
+    // Ref: 57c1ab3949324c321600013f
+    func toLeetSpeak(_ s : String) -> String {
+        s.compactMap { LeetMap[String($0)] ?? " "}.joined(separator: "")
+    }
+    
+    // Task: Simple Fun #74: Growing Plant
+    // Ref: 58941fec8afa3618c9000184
+    func growingPlant(_ upSpeed: Int, _ downSpeed: Int, _ desiredHeight: Int) -> Int {
+      upSpeed >= desiredHeight ? 1 : (desiredHeight - downSpeed - 1) / (upSpeed - downSpeed) + 1
+    }
+    
+    // Task: Waiting room
+    // Ref: 542f0c36d002f8cd8a0005e5
+    func lastChair(_ n: Int) -> Int {
+      n - 1
+    }
+    
+    // Task: Minimum Perimeter of a Rectangle
+    // Ref: 5826f54cc60c7e5266000baf
+    func minimumPerimeter(_ area: Int64) -> Int64 {
+        let max = Int64(sqrt(Double(area)))
+        var minPerimeter = Int64.max
+        for i in 1...max {
+            if area % i == 0 {
+                minPerimeter = min(minPerimeter, (i + area / i) * 2)
+            }
+        }
+        return minPerimeter
+    }
+    
+    // Task: Linked Lists - Get Nth Node
+    // Ref: 55befc42bfe4d13ab1000007
+    func getNth(_ head: Node?, _ index: Int) throws -> Node? {
+        guard index >= 0, head != nil else { throw "Invalid index" }
+        var current = head
+        var remainder = index
+        while remainder > 0 && current != nil {
+            current = current?.next
+            remainder -= 1
+        }
+        if current == nil {
+            throw "Invalid index"
+        }
+        return current
+    }
+    
+    // Task: Factorial
+    // Ref: 57a049e253ba33ac5e000212
+    func factorial(_ n: Int) -> UInt64 {
+      n == 0 || n == 1 ? 1 : UInt64(n) * factorial(n - 1)
+    }
+
+    // Task: Find all non-consecutive numbers
+    // Ref: 58f8b35fda19c0c79400020f
+    func allNonConsecutive (_ arr: [Int]) -> [(Int, Int)] {
+      arr.indices.compactMap {
+        $0 > 0 && arr[$0 - 1] + 1 != arr[$0] ? ($0, arr[$0]) : nil
+      }
+    }
+    
+    // Task: Heron's formula
+    // Ref: 57aa218e72292d98d500240f
+    func heron(_ a: Double, _ b: Double, _ c: Double) -> Double {
+      let s = (a + b + c) / 2
+        return sqrt(s * (s - a) * (s - b) * (s - c))
+    }
 }
 
 // Task: Jaden Casing Strings
@@ -398,3 +490,34 @@ extension String {
         }.joined(separator: " ")
     }
 }
+
+extension String: Error {}
+
+let LeetMap = [
+  "A" : "@",
+  "B" : "8",
+  "C" : "(",
+  "D" : "D",
+  "E" : "3",
+  "F" : "F",
+  "G" : "6",
+  "H" : "#",
+  "I" : "!",
+  "J" : "J",
+  "K" : "K",
+  "L" : "1",
+  "M" : "M",
+  "N" : "N",
+  "O" : "0",
+  "P" : "P",
+  "Q" : "Q",
+  "R" : "R",
+  "S" : "$",
+  "T" : "7",
+  "U" : "U",
+  "V" : "V",
+  "W" : "W",
+  "X" : "X",
+  "Y" : "Y",
+  "Z" : "2"
+]
