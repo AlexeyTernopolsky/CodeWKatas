@@ -203,4 +203,185 @@ enum Kyu5_1 {
         }
         return result
     }
+    
+    // Task: Find the smallest
+    // Ref: 573992c724fc289553000e95
+    func smallest(_ n: Int) -> (Int, Int, Int) {
+        let originAr = String(n).map { $0.wholeNumberValue }
+        var min = n
+        var minI = 0
+        var minJ = 0
+        for i in originAr.indices {
+            var changedI = originAr
+            let element = changedI.remove(at: i)
+            for j in 0...changedI.count {
+                var changedJ = changedI
+                changedJ.insert(element, at: j)
+                if let newValue = Int(changedJ.map { String($0 ?? 0) }.joined(separator: "")) {
+                    if newValue < min {
+                        min = newValue
+                        minI = i
+                        minJ = j
+                    }
+                }
+            }
+        }
+        return (min, minI, minJ)
+    }
+    
+    // Task: Fibo akin
+    // Ref: 5772382d509c65de7e000982
+    func fillSequence(_ n: Int) -> [Int] {
+        let result = NSMutableArray(capacity: n)
+        result.add(1)
+        result.add(1)
+        for i in 2..<n {
+            let index1 = i - (result[i - 1] as! Int)
+            let index2 = i - (result[i - 2] as! Int)
+            result.add((result[index1] as! Int) + (result[index2] as! Int))
+        }
+        return result as! [Int]
+    }
+    
+    func lengthSupUk(_ n: Int, _ k: Int) -> Int {
+        fillSequence(n).filter { $0 >= k }.count
+    }
+    
+    func comp(_ n: Int) -> Int {
+        var result = 0
+        let sequence = fillSequence(n)
+        for i in 1..<n {
+            if sequence[i] < sequence[i-1] {
+                result += 1
+            }
+        }
+        
+        return result
+    }
+    
+    // Task: Going to zero or to infinity?
+    // Ref: 55a29405bc7d2efaff00007c
+    func going(_ n: Int) -> Double {
+        var curValue = 0.0
+        for i in 1...n {
+            curValue = 1.0 + curValue / Double(i)
+        }
+        return curValue
+    }
+    
+    // Task: Splitting the Workload (part I)
+    // Ref: 587387d169b6fddc16000002
+    func splitlist(_ list: [Int]) -> ([Int], [Int]) {
+        let sum = list.reduce(0, +)
+        let countOfSamples = Int(pow(2.0, Double(list.count)))
+        var minDiff = Int.max
+        var minSample = 0
+        for sample in 0..<countOfSamples {
+            var sum1 = sum, sum2 = 0
+            for index in list.indices {
+                let include = (sample >> index) % 2 == 0
+                if include {
+                    sum2 += list[index]
+                    sum1 -= list[index]
+                }
+            }
+            let diff = abs(sum2 - sum1)
+            if diff < minDiff {
+                minDiff = diff
+                minSample = sample
+            }
+        }
+        var list1 = [Int](), list2 = [Int]()
+        for index in list.indices {
+            let include = (minSample >> index) % 2 == 0
+            if include {
+                list1.append(list[index])
+            } else {
+                list2.append(list[index])
+            }
+        }
+        return (list1, list2)
+    }
+    
+    // Task: Some Egyptian fractions
+    // Ref: 54f8693ea58bce689100065f
+    struct Fraction {
+        let nr: Int64
+        let dr: Int64
+        
+        var representation: String { "\(nr)/\(dr)" }
+        var firstGreedyEgyptionFraction: Fraction {
+            let newDr = dr % nr == 0 ? dr / nr : (dr / nr) + 1
+            return Fraction(nr: 1, dr: newDr)
+        }
+        
+        static func -(_ one: Fraction, two: Fraction) -> Fraction {
+            var oneDr = one.dr
+            var twoDr = two.dr
+            outerloop: repeat {
+                if oneDr == 1 || twoDr == 1 {
+                    break
+                } else {
+                    let maxCheck = Int64(sqrt(Double(min(oneDr, twoDr)))) + 1
+                    for i in 2...maxCheck {
+                        if oneDr % i == 0 && twoDr % i == 0 {
+                            oneDr /= i
+                            twoDr /= i
+                            continue outerloop
+                        }
+                    }
+                    let minNumber = min(oneDr, twoDr)
+                    if oneDr % minNumber == 0 && twoDr % minNumber == 0 {
+                        oneDr /= minNumber
+                        twoDr /= minNumber
+                    }
+                    break
+                }
+            } while true
+            return Fraction(nr: one.nr * twoDr - two.nr * oneDr, dr: one.dr * twoDr)
+        }
+        
+        mutating func normalize() {
+            var newNr = nr
+            var newDr = dr
+            outerloop: repeat {
+                let max = newNr / 2 + 2
+                for i in 2...max {
+                    if newNr % i == 0 && newDr % i == 0 {
+                        newNr /= i
+                        newDr /= i
+                        continue outerloop
+                    }
+                }
+                if newDr % newNr == 0 {
+                  newDr /= newNr
+                  newNr = 1
+                }
+                break
+            } while true
+            self = Fraction(nr: newNr, dr: newDr)
+        }
+    }
+
+    func decompose(_ nrStr: String, _ drStr: String) -> String {
+        guard var nr = Int64(nrStr), let dr = Int64(drStr), nr > 0, dr > 0 else { return "" }
+        var fullPart = nr >= dr ? "\(nr/dr)" : ""
+        nr -= (nr / dr) * dr
+        guard nr != 0 else { return fullPart }
+        if !fullPart.isEmpty { fullPart += "," }
+        var lastFraction = Fraction(nr: nr, dr: dr)
+        var resultArray = [Fraction]()
+        repeat {
+            lastFraction.normalize()
+            if lastFraction.nr == 1 {
+                resultArray.append(lastFraction)
+                break
+            } else {
+                let egyptianFraction = lastFraction.firstGreedyEgyptionFraction
+                resultArray.append(egyptianFraction)
+                lastFraction = lastFraction - egyptianFraction
+            }
+        } while true
+        return fullPart + resultArray.map{ $0.representation }.joined(separator: ",")
+    }
 }

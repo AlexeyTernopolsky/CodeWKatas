@@ -11,6 +11,7 @@
 		8A4196A22C80B2E8009324DC /* Kyu7_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196A12C80B2E8009324DC /* Kyu7_2.swift */; };
 		8A4196A52C80B58A009324DC /* FlipYourStack_6kyu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196A42C80B58A009324DC /* FlipYourStack_6kyu.swift */; };
 		8A4196A72C80B5FF009324DC /* Kyu6_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196A62C80B5FF009324DC /* Kyu6_2.swift */; };
+		8A4196A92C80C2FA009324DC /* TheLatestClock_6kyu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196A82C80C2FA009324DC /* TheLatestClock_6kyu.swift */; };
 		8AC4B73C2C80982C007416C6 /* Codewars_KataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B73B2C80982C007416C6 /* Codewars_KataApp.swift */; };
 		8AC4B73E2C80982C007416C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B73D2C80982C007416C6 /* ContentView.swift */; };
 		8AC4B7402C80982E007416C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4B73F2C80982E007416C6 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		8A4196A12C80B2E8009324DC /* Kyu7_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu7_2.swift; sourceTree = "<group>"; };
 		8A4196A42C80B58A009324DC /* FlipYourStack_6kyu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipYourStack_6kyu.swift; sourceTree = "<group>"; };
 		8A4196A62C80B5FF009324DC /* Kyu6_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu6_2.swift; sourceTree = "<group>"; };
+		8A4196A82C80C2FA009324DC /* TheLatestClock_6kyu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheLatestClock_6kyu.swift; sourceTree = "<group>"; };
 		8AC4B7382C80982C007416C6 /* Codewars Kata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codewars Kata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4B73B2C80982C007416C6 /* Codewars_KataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codewars_KataApp.swift; sourceTree = "<group>"; };
 		8AC4B73D2C80982C007416C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				8A4196A42C80B58A009324DC /* FlipYourStack_6kyu.swift */,
+				8A4196A82C80C2FA009324DC /* TheLatestClock_6kyu.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				8AC4B7692C809B1E007416C6 /* Kyu8_1.swift in Sources */,
 				8A4196A02C80A531009324DC /* Kyu4_1.swift in Sources */,
 				8AC4B76B2C809FCA007416C6 /* Kyu5_1.swift in Sources */,
+				8A4196A92C80C2FA009324DC /* TheLatestClock_6kyu.swift in Sources */,
 				8A4196A52C80B58A009324DC /* FlipYourStack_6kyu.swift in Sources */,
 				8A4196A72C80B5FF009324DC /* Kyu6_2.swift in Sources */,
 				8AC4B7672C80993F007416C6 /* Kyu6_1.swift in Sources */,
