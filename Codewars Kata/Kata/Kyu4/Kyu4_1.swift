@@ -8,6 +8,7 @@
 import Foundation
 
 enum Kyu4_1 {
+    case one
     // Task: Human readable duration format
     // Ref: 52742f58faf5485cae000b9a
     func formatDuration(_ seconds: Int) -> String {
@@ -86,5 +87,50 @@ enum Kyu4_1 {
         fillElement(0, 0)
         
         return mazeAr[N-1][N-1] == .filled
+    }
+    
+    // Task: Esolang Interpreters #3 - Custom Paintf**k Interpreter
+    // Ref: https://www.codewars.com/kata/5868a68ba44cfc763e00008d
+    func buildGotoMap(code: String) -> [String.Index : String.Index] {
+        var stack = [String.Index]()
+        // Fill goto dictionary
+        var gotoDictionary = [String.Index : String.Index]()
+        code.indices.forEach {
+            switch code[$0] {
+            case "[": stack.append($0)
+            case "]": if let prev = stack.popLast() {
+                gotoDictionary[prev] = $0
+                gotoDictionary[$0] = prev
+            }
+            default: break
+            }
+        }
+        return gotoDictionary
+    }
+
+    func interpreter(code: String, iterations: Int, width: Int, height: Int) -> String {
+        var grid = Array(repeating: Array(repeating: false, count: width), count: height)
+        var (x, y) = (0, 0)
+        let gotoMap = buildGotoMap(code: code)
+        var curIteration = 0
+        var codeIndex = code.startIndex
+        while codeIndex < code.endIndex && curIteration < iterations {
+            switch code[codeIndex] {
+            case "n":
+                y -= 1
+                if y < 0 { y = height - 1 }
+            case "w": x -= 1
+                if x < 0 { x = width - 1 }
+            case "e": x = (x + 1) % width
+            case "s": y = (y + 1) % height
+            case "*": grid[y][x] = grid[y][x] ? false : true
+            case "[": if !grid[y][x] { codeIndex = gotoMap[codeIndex]! }
+            case "]": if grid[y][x] { codeIndex = gotoMap[codeIndex]! }
+            default: curIteration -= 1
+            }
+            codeIndex = code.index(after: codeIndex)
+            curIteration += 1
+        }
+        return grid.map { $0.map { $0 ? "1" : "0" }.joined(separator: "") }.joined(separator: "\r\n")
     }
 }

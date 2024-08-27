@@ -8,6 +8,7 @@
 import Foundation
 
 enum Kyu7_2 {
+    case one 
     // Task: Sum of two lowest positive integers
     // Ref: 558fc85d8fd1938afb000014
     func sumOfTwoSmallestIntegersIn(_ array: [Int]) -> Int {
@@ -197,5 +198,24 @@ enum Kyu7_2 {
     // replace the dots with function parameter
     func oper(_ operation:(String)->String, _ s: String) -> String {
         operation(s)
+    }
+    
+    // Task: Easy wallpaper
+    // Ref: https://www.codewars.com/kata/567501aec64b81e252000003
+    func wallpaper(_ l: Double, _  w: Double,_  h: Double) -> String {
+        let numbers = ["zero", "one", "two", "three", "four", "five",
+                   "six", "seven", "eight", "nine", "ten",
+                   "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+                   "sixteen", "seventeen", "eighteen", "nineteen", "twenty"]
+        guard l > 0.0, w > 0.0, h > 0.0 else { return numbers[0] }
+        let square = (w * h + l * h) * 2.0 * 1.15
+        let count = Int(ceil(square / (10 * 0.52)))
+        return numbers[count]
+    }
+    
+    // Task: Floating-point Approximation (III)
+    // Ref: https://www.codewars.com/kata/5b0c0ec907756ffcff00006e
+    func quadratic(_ a: Double, _ b: Double, _ c: Double) -> Double {
+        -c/b
     }
 }

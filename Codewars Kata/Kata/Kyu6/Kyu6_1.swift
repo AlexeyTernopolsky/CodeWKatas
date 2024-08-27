@@ -9,6 +9,7 @@ import Foundation
 
 // Some functions can have same names, need to wrap in different enums(as namespace)
 enum Kyu6_1 {
+    case one
     // Task: Two Sum
     // Ref: 52c31f8e6605bcc646000082
     class Solution {
@@ -312,14 +313,14 @@ enum Kyu6_1 {
     }
     
     func allocateRooms(_ customers: [[Int]]) -> [Int] {
-        var c = customers.enumerated().map {
+        let c = customers.enumerated().map {
             Customer(arrival: $0.element[0], departure: $0.element[1], index: $0.offset)
         }.sorted { $0.arrival < $1.arrival }
         c[0].room = 1
         var roomsDeparture = [c[0].departure]
         for index in 1..<c.count {
             let curCustomer = c[index]
-            if let freeRoom = roomsDeparture.firstIndex { $0 < curCustomer.arrival  } {
+            if let freeRoom = roomsDeparture.firstIndex(where: { $0 < curCustomer.arrival  }) {
                 roomsDeparture[freeRoom] = curCustomer.departure
                 curCustomer.room = freeRoom + 1
             } else {

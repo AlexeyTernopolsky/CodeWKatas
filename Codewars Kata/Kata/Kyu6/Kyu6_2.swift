@@ -8,6 +8,7 @@
 import Foundation
 
 enum Kyu6_2 {
+    case one
     // Task: Moves in squared strings (IV)
     // Ref: 56dbf59b0a10feb08c000227
     func diag2Sym(_ s: String) -> String {
@@ -282,6 +283,47 @@ enum Kyu6_2 {
             curProbe += 1
             curSum = curSum * (n - curProbe + 1) / curProbe
         }
+    }
+    
+    // Task: What century is it?
+    // Ref: https://www.codewars.com/kata/52fb87703c1351ebd200081f
+    func whatCentury(_ year: String) -> String {
+      guard let yearNumber = Int(year) else { return "" }
+      let centureNumber = (yearNumber - 1) / 100 + 1
+      var centureAdd = "th"
+      if centureNumber < 10 || centureNumber > 20 {
+        switch centureNumber % 10 {
+          case 1: centureAdd = "st"
+          case 2: centureAdd = "nd"
+          case 3: centureAdd = "rd"
+          default: break
+        }
+      }
+      return "\(centureNumber)" + centureAdd
+    }
+    
+    // Task: Multiples of 3 or 5
+    // Ref: https://www.codewars.com/kata/514b92a657cdc65150000006
+    func solution(_ num: Int) -> Int {
+      func sumForMultiple(_ m: Int) -> Int {
+        let count = (num - 1) / m
+        return m * (count + 1) * count / 2
+      }
+      guard num >= 3 else { return 0 }
+      return sumForMultiple(3) + sumForMultiple(5) - sumForMultiple(15)
+    }
+    
+    // Task: n-back
+    // Ref: https://www.codewars.com/kata/599c7f81ca4fa35314000140
+    func countTargets(_ n: Int, _ sequence: [Int]) -> Int {
+      guard sequence.count > n else { return 0 }
+      var counter = 0
+      for i in n...sequence.count - 1 {
+        if sequence[i] == sequence[i - n] {
+          counter += 1
+        }
+      }
+      return counter
     }
 }
 

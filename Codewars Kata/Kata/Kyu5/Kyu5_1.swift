@@ -8,6 +8,7 @@
 import Foundation
 
 enum Kyu5_1 {
+    case one
     // Task: Perimeter of squares in a rectangle
     // Ref: 559a28007caad2ac4e000083
     func perimeter(_ n: UInt64) -> UInt64 {
@@ -383,5 +384,120 @@ enum Kyu5_1 {
             }
         } while true
         return fullPart + resultArray.map{ $0.representation }.joined(separator: ",")
+    }
+    
+    // Task: Resistor Color Codes, Part 2
+    // Ref: https://www.codewars.com/kata/5855777bb45c01bada0002ac
+    func encodeResistorColors(_ ohmsString: String) -> String {
+        //guard false else { return "Invalid" }
+        guard var number = Double(ohmsString.filter { $0.isNumber || $0.isPunctuation }) else { return "Invalid" }
+        var multiple: Int
+        switch ohmsString.split(separator: " ")[0].filter({ $0.isLetter }) {
+        case "k": multiple = 3
+        case "M": multiple = 6
+        default: multiple = 0
+        }
+        while number >= 100 {
+            number /= 10
+            multiple += 1
+        }
+        while number < 10 {
+            number *= 10
+            multiple -= 1
+        }
+        number = round(number)
+        let colorNames = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "gray", "white"]
+        let firstDigit = Int(number / 10)
+        let secondDigit = Int(number) % 10
+        
+        return "\(colorNames[firstDigit]) \(colorNames[secondDigit]) \(colorNames[multiple]) gold"
+    }
+    
+    // Task: Gap in Primes
+    // Ref: https://www.codewars.com/kata/561e9c843a2ef5a40c0000a4
+    func isPrime(_ number: Int) -> Bool {
+        let checkUntil = Int(sqrt(Double(number)))
+        var index = 0
+        while index < primes.count && primes[index] <= checkUntil {
+            if number % primes[index] == 0 {
+                return false
+            }
+            index += 1
+        }
+        return true
+    }
+
+    func fillPrimes(until topBorder: Int) {
+        var index = (primes.last ?? 1) + 1
+        let checkUntil = Int(sqrt(Double(topBorder)))
+        while index <= checkUntil {
+            if isPrime(index) {
+                primes.append(index)
+            }
+            index += 1
+        }
+    }
+
+    func gap(_ g: Int, _ m: Int, _ n: Int) -> (Int, Int)? {
+        fillPrimes(until: n)
+        guard n - m >= g else { return nil }
+        var prev: Int?
+        for i in m...n {
+            if isPrime(i) {
+                if let prev, i - prev == g {
+                    return (prev, i)
+                }
+                prev = i
+            }
+        }
+        return nil
+    }
+    
+    // Task: Coding with Squared Strings
+    // Ref: https://www.codewars.com/kata/56fcc393c5957c666900024d
+    func code(_ s: String) -> String {
+        let n = Int(ceil(sqrt(Double(s.count))))
+        let remainSize = n*n - s.count
+        let updatedStr = s + String(repeating: "\u{F7}", count: remainSize)
+        let nStr = (0..<n).map {
+            let startIndex = updatedStr.index(updatedStr.startIndex, offsetBy: $0 * n)
+            let endIndex = updatedStr.index(startIndex, offsetBy: n - 1)
+            return updatedStr[startIndex...endIndex]
+        }.joined(separator: "\n")
+        return Kyu6_3.one.rot90Clock(s: nStr)
+    }
+
+    func decode(_ s: String) -> String {
+        Kyu6_2.one.rot90Counter(s).split(separator: "\n").joined(separator: "").filter { $0 != "\u{F7}" }
+    }
+    
+    // Task: Phone Directory
+    // Ref: https://www.codewars.com/kata/56baeae7022c16dd7400086e
+    func phone(_ string: String, _ num: String) -> String {
+        let entries = string.split(separator: "\n")
+        var foundIndex: Int?
+        for index in entries.indices {
+            if entries[index].contains(num) {
+                if foundIndex != nil {
+                    return "Error => Too many people: \(num)"
+                } else {
+                    foundIndex = index
+                }
+            }
+        }
+        if let foundIndex {
+            var entry = entries[foundIndex]
+            entry = entry.replacing(num, with: "")
+            var name = ""
+            if let firstBracket = entry.firstIndex(of: "<"), let lastBracket = entry.firstIndex(of: ">") {
+                name = String(entry[entry.index(after: firstBracket)...entry.index(before: lastBracket)])
+                entry = entry[entry.startIndex...firstBracket] + entry[lastBracket..<entry.endIndex]
+            }
+            let set = CharacterSet(charactersIn: "<>+!/*:;_$?, ")
+            let address = entry.components(separatedBy: set).filter{ !$0.isEmpty }.joined(separator: " ")
+            return "Phone => \(num), Name => \(name), Address => \(address)"
+        } else {
+            return "Error => Not found: \(num)"
+        }
     }
 }

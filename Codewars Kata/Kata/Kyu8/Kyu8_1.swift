@@ -8,6 +8,7 @@
 import Foundation
 
 enum Kyu8_1 {
+    case one
     // Task: Grasshopper - Messi goals function
     // Ref: 55f73be6e12baaa5900000d4
     func goals(laLigaGoals: Int, copaDelReyGoals: Int, championsLeagueGoals: Int) -> Int {
@@ -446,5 +447,20 @@ enum Kyu8_1 {
     // Ref: 56c5847f27be2c3db20009c3
     func subtractSum(_ n: Int) -> String {
         "apple"
+    }
+    
+    // Task: Short Long Short
+    // Ref: https://www.codewars.com/kata/50654ddff44f800200000007
+    func shortLongShort(_ a: String, _ b: String) -> String {
+        let min: String
+        let max: String
+        if a.count > b.count {
+            min = b
+            max = a
+        } else {
+            min = a
+            max = b
+        }
+        return "\(min)\(max)\(min)"
     }
 }

@@ -12,6 +12,14 @@
 		8A4196A52C80B58A009324DC /* FlipYourStack_6kyu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196A42C80B58A009324DC /* FlipYourStack_6kyu.swift */; };
 		8A4196A72C80B5FF009324DC /* Kyu6_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196A62C80B5FF009324DC /* Kyu6_2.swift */; };
 		8A4196A92C80C2FA009324DC /* TheLatestClock_6kyu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196A82C80C2FA009324DC /* TheLatestClock_6kyu.swift */; };
+		8A4196AB2C80E55B009324DC /* CuckooClock_6kyu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196AA2C80E55B009324DC /* CuckooClock_6kyu.swift */; };
+		8A4196AD2C80E63B009324DC /* Kyu6_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196AC2C80E63B009324DC /* Kyu6_3.swift */; };
+		8A4196AF2C80EA79009324DC /* Kyu5_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196AE2C80EA79009324DC /* Kyu5_2.swift */; };
+		8A4196B12C80EC88009324DC /* StatisticsForAthleticAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196B02C80EC88009324DC /* StatisticsForAthleticAssociation.swift */; };
+		8A4196B32C80ED2F009324DC /* Kyu5_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196B22C80ED2F009324DC /* Kyu5_3.swift */; };
+		8A4196B52C80EE20009324DC /* ProjectileMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196B42C80EE20009324DC /* ProjectileMotion.swift */; };
+		8A4196B72C80F027009324DC /* Kyu3_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196B62C80F027009324DC /* Kyu3_1.swift */; };
+		8A4196BF2C80F197009324DC /* Kyu6_4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4196BE2C80F197009324DC /* Kyu6_4.swift */; };
 		8AC4B73C2C80982C007416C6 /* Codewars_KataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B73B2C80982C007416C6 /* Codewars_KataApp.swift */; };
 		8AC4B73E2C80982C007416C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC4B73D2C80982C007416C6 /* ContentView.swift */; };
 		8AC4B7402C80982E007416C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AC4B73F2C80982E007416C6 /* Assets.xcassets */; };
@@ -48,6 +56,14 @@
 		8A4196A42C80B58A009324DC /* FlipYourStack_6kyu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipYourStack_6kyu.swift; sourceTree = "<group>"; };
 		8A4196A62C80B5FF009324DC /* Kyu6_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu6_2.swift; sourceTree = "<group>"; };
 		8A4196A82C80C2FA009324DC /* TheLatestClock_6kyu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheLatestClock_6kyu.swift; sourceTree = "<group>"; };
+		8A4196AA2C80E55B009324DC /* CuckooClock_6kyu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuckooClock_6kyu.swift; sourceTree = "<group>"; };
+		8A4196AC2C80E63B009324DC /* Kyu6_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu6_3.swift; sourceTree = "<group>"; };
+		8A4196AE2C80EA79009324DC /* Kyu5_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu5_2.swift; sourceTree = "<group>"; };
+		8A4196B02C80EC88009324DC /* StatisticsForAthleticAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsForAthleticAssociation.swift; sourceTree = "<group>"; };
+		8A4196B22C80ED2F009324DC /* Kyu5_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu5_3.swift; sourceTree = "<group>"; };
+		8A4196B42C80EE20009324DC /* ProjectileMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectileMotion.swift; sourceTree = "<group>"; };
+		8A4196B62C80F027009324DC /* Kyu3_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu3_1.swift; sourceTree = "<group>"; };
+		8A4196BE2C80F197009324DC /* Kyu6_4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyu6_4.swift; sourceTree = "<group>"; };
 		8AC4B7382C80982C007416C6 /* Codewars Kata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Codewars Kata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC4B73B2C80982C007416C6 /* Codewars_KataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codewars_KataApp.swift; sourceTree = "<group>"; };
 		8AC4B73D2C80982C007416C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,8 +110,65 @@
 			children = (
 				8A4196A42C80B58A009324DC /* FlipYourStack_6kyu.swift */,
 				8A4196A82C80C2FA009324DC /* TheLatestClock_6kyu.swift */,
+				8A4196AA2C80E55B009324DC /* CuckooClock_6kyu.swift */,
+				8A4196B02C80EC88009324DC /* StatisticsForAthleticAssociation.swift */,
+				8A4196B42C80EE20009324DC /* ProjectileMotion.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		8A4196B82C80F081009324DC /* Kyu8 */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B7682C809B1E007416C6 /* Kyu8_1.swift */,
+			);
+			path = Kyu8;
+			sourceTree = "<group>";
+		};
+		8A4196B92C80F092009324DC /* Kyu7 */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B76C2C80A017007416C6 /* Kyu7_1.swift */,
+				8A4196A12C80B2E8009324DC /* Kyu7_2.swift */,
+			);
+			path = Kyu7;
+			sourceTree = "<group>";
+		};
+		8A4196BA2C80F0AA009324DC /* Kyu6 */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B7662C80993F007416C6 /* Kyu6_1.swift */,
+				8A4196A62C80B5FF009324DC /* Kyu6_2.swift */,
+				8A4196AC2C80E63B009324DC /* Kyu6_3.swift */,
+				8A4196BE2C80F197009324DC /* Kyu6_4.swift */,
+			);
+			path = Kyu6;
+			sourceTree = "<group>";
+		};
+		8A4196BB2C80F0B7009324DC /* Kyu5 */ = {
+			isa = PBXGroup;
+			children = (
+				8AC4B76A2C809FCA007416C6 /* Kyu5_1.swift */,
+				8A4196AE2C80EA79009324DC /* Kyu5_2.swift */,
+				8A4196B22C80ED2F009324DC /* Kyu5_3.swift */,
+			);
+			path = Kyu5;
+			sourceTree = "<group>";
+		};
+		8A4196BC2C80F0C5009324DC /* Kyu4 */ = {
+			isa = PBXGroup;
+			children = (
+				8A41969F2C80A531009324DC /* Kyu4_1.swift */,
+			);
+			path = Kyu4;
+			sourceTree = "<group>";
+		};
+		8A4196BD2C80F0D4009324DC /* Kyu3 */ = {
+			isa = PBXGroup;
+			children = (
+				8A4196B62C80F027009324DC /* Kyu3_1.swift */,
+			);
+			path = Kyu3;
 			sourceTree = "<group>";
 		};
 		8AC4B72F2C80982C007416C6 = {
@@ -158,14 +231,13 @@
 		8AC4B7652C8098F4007416C6 /* Kata */ = {
 			isa = PBXGroup;
 			children = (
+				8A4196BD2C80F0D4009324DC /* Kyu3 */,
+				8A4196BC2C80F0C5009324DC /* Kyu4 */,
+				8A4196BB2C80F0B7009324DC /* Kyu5 */,
+				8A4196BA2C80F0AA009324DC /* Kyu6 */,
+				8A4196B92C80F092009324DC /* Kyu7 */,
+				8A4196B82C80F081009324DC /* Kyu8 */,
 				8A4196A32C80B56C009324DC /* Custom */,
-				8AC4B7682C809B1E007416C6 /* Kyu8_1.swift */,
-				8AC4B76C2C80A017007416C6 /* Kyu7_1.swift */,
-				8A4196A12C80B2E8009324DC /* Kyu7_2.swift */,
-				8AC4B7662C80993F007416C6 /* Kyu6_1.swift */,
-				8A4196A62C80B5FF009324DC /* Kyu6_2.swift */,
-				8AC4B76A2C809FCA007416C6 /* Kyu5_1.swift */,
-				8A41969F2C80A531009324DC /* Kyu4_1.swift */,
 			);
 			path = Kata;
 			sourceTree = "<group>";
@@ -303,13 +375,21 @@
 				8A4196A22C80B2E8009324DC /* Kyu7_2.swift in Sources */,
 				8AC4B7692C809B1E007416C6 /* Kyu8_1.swift in Sources */,
 				8A4196A02C80A531009324DC /* Kyu4_1.swift in Sources */,
+				8A4196B72C80F027009324DC /* Kyu3_1.swift in Sources */,
 				8AC4B76B2C809FCA007416C6 /* Kyu5_1.swift in Sources */,
 				8A4196A92C80C2FA009324DC /* TheLatestClock_6kyu.swift in Sources */,
 				8A4196A52C80B58A009324DC /* FlipYourStack_6kyu.swift in Sources */,
 				8A4196A72C80B5FF009324DC /* Kyu6_2.swift in Sources */,
+				8A4196B32C80ED2F009324DC /* Kyu5_3.swift in Sources */,
+				8A4196B12C80EC88009324DC /* StatisticsForAthleticAssociation.swift in Sources */,
+				8A4196AB2C80E55B009324DC /* CuckooClock_6kyu.swift in Sources */,
+				8A4196AD2C80E63B009324DC /* Kyu6_3.swift in Sources */,
 				8AC4B7672C80993F007416C6 /* Kyu6_1.swift in Sources */,
+				8A4196BF2C80F197009324DC /* Kyu6_4.swift in Sources */,
 				8AC4B73E2C80982C007416C6 /* ContentView.swift in Sources */,
+				8A4196B52C80EE20009324DC /* ProjectileMotion.swift in Sources */,
 				8AC4B73C2C80982C007416C6 /* Codewars_KataApp.swift in Sources */,
+				8A4196AF2C80EA79009324DC /* Kyu5_2.swift in Sources */,
 				8AC4B76D2C80A017007416C6 /* Kyu7_1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,25 +9,24 @@ import XCTest
 @testable import Codewars_Kata
 
 final class Codewars_KataTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        let actual = [2,3]
-        XCTAssertEqual(actual, Kyu6_1.Solution.twosum(numbers: [1,54,24,35], target: 59))
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func dotest(_ nb: Int, _ exp: Double) {
+        var inrange: Bool; let merr: Double = 1e-12; var e: Double;
+        let actu = Kyu5_2.one.exEuler(nb)
+        e = abs(actu - exp)
+        inrange = (e <= merr)
+        if inrange == false {
+            print(String(format:"Expected should be near: %.12f", exp));
+            print(String(format:"but got: %.12f", actu))
         }
+        XCTAssertEqual(inrange, true)
     }
-
+    
+    func testExample() {
+        dotest(1, 0.5)
+        dotest(10, 0.026314)
+        dotest(17, 0.015193)
+        
+    }
+    
 }

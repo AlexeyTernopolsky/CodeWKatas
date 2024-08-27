@@ -8,6 +8,7 @@
 import Foundation
 
 enum Kyu7_1 {
+    case one
     // Task: Flatten and sort an array
     // Ref: 57ee99a16c8df7b02d00045f
     func flattenAndSort<T: Comparable>(_ arr: [[T]]) -> [T] {
@@ -46,7 +47,7 @@ enum Kyu7_1 {
         }
         
         var resistance = decodeWord(words[0]) * 10 + decodeWord(words[1])
-        var power = pow(10, decodeWord(words[2]))
+        let power = pow(10, decodeWord(words[2]))
         resistance *= power
         var result = ""
         var resStr = ""
